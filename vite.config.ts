@@ -16,7 +16,13 @@ const dirname =
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
     // insertTypesEntry: true will add "types": "dist/index.d.ts" to your package.json
-    plugins: [react(), dts({ insertTypesEntry: true })],
+    plugins: [
+        react(),
+        dts({
+            exclude: ['**/*.stories.ts', '**/*.test.ts'],
+            insertTypesEntry: true,
+        }),
+    ],
     resolve: {
         alias: {
             '@components': path.resolve(__dirname, 'src/components'),
