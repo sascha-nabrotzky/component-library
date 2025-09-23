@@ -17,6 +17,13 @@ const dirname =
 export default defineConfig({
     // insertTypesEntry: true will add "types": "dist/index.d.ts" to your package.json
     plugins: [react(), dts({ insertTypesEntry: true })],
+    resolve: {
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons'),
+            '@images': path.resolve(__dirname, 'src/assets/images'),
+        },
+    },
     test: {
         projects: [
             {
