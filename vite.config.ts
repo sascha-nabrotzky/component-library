@@ -15,7 +15,8 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-    plugins: [react(), dts({ exclude: ['**/*.stories.ts', '**/*.test.ts'] })],
+    // insertTypesEntry: true will add "types": "dist/index.d.ts" to your package.json
+    plugins: [react(), dts({ insertTypesEntry: true })],
     test: {
         projects: [
             {
@@ -46,6 +47,7 @@ export default defineConfig({
     },
     build: {
         lib: {
+            // Entry point for the library build process
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'sn-ui',
             fileName: (format) => `sn-ui.${format}.js`,
