@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
+# Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dieses Projekt ist eine moderne React-Komponentenbibliothek, entwickelt mit TypeScript und Vite. Ziel ist es, wiederverwendbare, gut dokumentierte UI-Komponenten für verschiedene Anwendungen bereitzustellen.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   ⚡️ Schnelles Development mit Vite
+-   🧩 Modular aufgebaute React-Komponenten
+-   🛡️ TypeScript für Typensicherheit
+-   🎨 Eigene Styles und Assets
+-   🧪 Storybook-Support für Komponenten-Dokumentation und Tests
+-   ✅ ESLint & Prettier für Code-Qualität
 
-## Expanding the ESLint configuration
+## Projektstruktur
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+  components/
+    Button/
+      Button.tsx
+      button.css
+      Button.stories.ts
+      index.ts
+    AnotherComponent/
+      File1.tsx
+      File2.css
+      File3.stories.ts
+      index.ts
+  assets/
+    icons/
+    images/
+    ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Entwicklung starten
+
+```bash
+npm run dev
+```
+
+## Komponenten testen & dokumentieren
+
+Storybook ist integriert, um Komponenten zu testen und zu dokumentieren.
+
+```bash
+npm run storybook
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Linting
+
+```bash
+npm run lint
 ```
