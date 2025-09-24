@@ -8,15 +8,16 @@
         "skipLibCheck": true,
 
         /* Bundler mode */
-        "moduleResolution": "bundler",
+        "moduleResolution": "node",
         "allowImportingTsExtensions": true,
+        "allowSyntheticDefaultImports": true,
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
         "noEmit": true,
         "jsx": "react-jsx",
         "outDir": "dist",
         "declaration": true,
-        "declarationDir": "./dist",
+        "declarationDir": "dist",
 
         /* Linting */
         "strict": true,
