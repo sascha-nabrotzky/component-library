@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/sascha-nabrotzky/component-library.git"
+        "url": "git+https://github.com/sascha-nabrotzky/component-library.git"
     },
     "exports": {
         ".": {
