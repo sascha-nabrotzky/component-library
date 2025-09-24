@@ -63,3 +63,29 @@ npm run build
 ```bash
 npm run lint
 ```
+
+## Publish
+
+1. Version in `package.json` anpassen
+
+```bash
+npm version patch/minor/major
+```
+
+2. Commit & Push
+
+```bash
+git add package.json
+git commit -m "Version der component-library erhöht"
+```
+
+```bash
+git push origin feature/MWS-3622-audit-app-component-library-anbinden
+```
+
+3. Veröffentlichen:
+
+```bash
+npm publish --dry-run
+npm publish
+```
