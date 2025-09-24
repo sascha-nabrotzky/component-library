@@ -1,9 +1,25 @@
 {
-    "name": "component-library",
+    "name": "@sascha-nabrotzky/component-library",
     "private": true,
     "version": "0.0.0",
+    "description": "My personal component library",
     "type": "module",
+    "main": "dist/sn-ui.es.js",
     "types": "dist/index.d.ts",
+    "styles": "dist/component-library.css",
+    "keywords": [
+        "component",
+        "library",
+        "ui"
+    ],
+    "license": "UNLICENSED",
+    "author": {
+        "name": "Sascha Nabrotzky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sascha-nabrotzky/component-library.git"
+    },
     "exports": {
         ".": {
             "import": "./dist/sn-ui.es.js",
