@@ -1,7 +1,7 @@
 {
     "name": "@sascha-nabrotzky/component-library",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "My personal component library",
     "type": "module",
     "main": "dist/sn-ui.es.js",
