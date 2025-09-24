@@ -15,12 +15,14 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-    // insertTypesEntry: true will add "types": "dist/index.d.ts" to your package.json
     plugins: [
         react(),
         dts({
             exclude: ['**/*.stories.ts', '**/*.test.ts'],
+            // insertTypesEntry: true will add "types": "dist/index.d.ts" to your package.json
             insertTypesEntry: true,
+            // Specify config path, otherwise no d.ts files are generated
+            tsconfigPath: './tsconfig.app.json',
         }),
     ],
     resolve: {
