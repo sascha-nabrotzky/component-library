@@ -97,3 +97,23 @@ git push origin feature/MWS-3622-audit-app-component-library-anbinden
 npm publish --dry-run
 npm publish
 ```
+
+## Konfiguration (eigene Notizen)
+
+### CSS-Import
+
+Das exports-Feld in der package.json steuert, welche Dateien und Pfade beim Importieren deines Pakets von außen verfügbar sind. Es legt fest, welche Module, Skripte oder Assets (wie CSS) Konsumenten über verschiedene Import-Pfade nutzen können. Damit kannst du z. B. steuern, ob jemand
+
+```bash
+import ... from "@sascha-nabrotzky/component-library"
+```
+
+oder
+
+```bash
+import ... from "@sascha-nabrotzky/component-library/dist/component-library.css"
+```
+
+machen darf.
+
+Das Feld "styles" ist kein offizieller Standard von npm, sondern wird von einigen Tools (z. B. Styleguidist, Storybook, manchmal auch Build-Tools) genutzt, um die Haupt-CSS-Datei eines Pakets zu kennzeichnen. Es sorgt aber nicht dafür, dass die CSS automatisch im Browser geladen wird – dafür ist ein expliziter Import nötig.

@@ -5,7 +5,7 @@
     "type": "module",
     "main": "dist/sn-ui.es.js",
     "types": "dist/index.d.ts",
-    "styles": "dist/component-library.css",
+    "styles": "./dist/component-library.css",
     "keywords": [
         "component",
         "library",
@@ -24,9 +24,15 @@
             "import": "./dist/sn-ui.es.js",
             "require": "./dist/sn-ui.umd.js"
         },
-        "./component-library": {
-            "require": "./component-library.css",
-            "default": "./component-library.css"
+        "./component-library.css": {
+            "import": "./dist/component-library.css",
+            "require": "./dist/component-library.css",
+            "default": "./dist/component-library.css"
+        },
+        "./dist/component-library.css": {
+            "import": "./dist/component-library.css",
+            "require": "./dist/component-library.css",
+            "default": "./dist/component-library.css"
         }
     },
     "files": [

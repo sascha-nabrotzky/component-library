@@ -3,6 +3,9 @@ import { Button } from '@sascha-nabrotzky/component-library';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+// To use the styles from the component library,
+// you must allow below path in package.json "exports" field
+import '@sascha-nabrotzky/component-library/dist/component-library.css';
 
 function App() {
     const [count, setCount] = useState(0);
