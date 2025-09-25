@@ -64,6 +64,14 @@ npm run build
 npm run lint
 ```
 
+## Lokales Testen der Komponente in einem anderen oder selben Projekt
+
+```bash
+npm link
+cd ../anderes-oder-selbenprojekt
+npm link @sascha-nabrotzky/component-library
+```
+
 ## Publish
 
 1. Version in `package.json` anpassen
