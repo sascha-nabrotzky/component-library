@@ -1,59 +1,45 @@
-import { useState } from 'react';
-import { Button } from '@sascha-nabrotzky/component-library';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useState } from "react";
+import { Button } from "@sascha-nabrotzky/component-library";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 // To use the styles from the component library,
 // you must allow below path in package.json "exports" field
-import '@sascha-nabrotzky/component-library/dist/component-library.css';
+import "@sascha-nabrotzky/component-library/dist/component-library.css";
 
 function App() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    return (
-        <>
-            <div>
-                <a
-                    href="https://vite.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={viteLogo}
-                        className="logo"
-                        alt="Vite logo"
-                    />
-                </a>
-                <a
-                    href="https://react.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={reactLogo}
-                        className="logo react"
-                        alt="React logo"
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <h2>Diese App läuft neben Storybook</h2>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-            <Button
-                label="Button from Component Library"
-                backgroundColor="#61dafb"
-                onClick={() => alert('Button clicked!')}
-            />
-        </>
-    );
+  return (
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <h2>Diese App läuft neben Storybook</h2>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+      <Button
+        label="Button from Component Library"
+        backgroundColor="#61dafb"
+        onClick={() => alert("Button clicked!")}
+      />
+    </>
+  );
 }
 
 export default App;
